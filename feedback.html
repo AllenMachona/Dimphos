@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Feedback | Crafted Experience</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 🌄 WALLPAPER BACKGROUND */
+body {
+  background: url('R.JFIF') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* DARK OVERLAY FOR READABILITY */
+.overlay {
+  min-height: 100vh;
+  background: rgba(0,0,0,0.65);
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+
+.logo img {
+  width: 55px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-list a:hover {
+  color: #f4a261;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+
+.title h1 {
+  font-size: 2.8rem;
+}
+
+.title p {
+  opacity: 0.8;
+}
+
+/* FORM */
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px 80px;
+}
+
+form {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 650px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* INPUT GRID */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+input, select, textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #f4a261;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #fff;
+  transform: scale(1.02);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+}
+
+.social a {
+  color: #fff;
+  margin: 0 10px;
+}
+
+.social a:hover {
+  color: #f4a261;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <img src="logo.webp" alt="Logo">
+  </div>
+
+  <ul class="nav-list">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="models.html">Models</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="feedback.html" class="active">Feedback</a></li>
+  </ul>
+</header>
+
+<!-- TITLE -->
+<div class="title">
+  <h1>We Value Your Feedback</h1>
+  <p>Help us improve your experience with detailed feedback</p>
+</div>
+
+<!-- FORM -->
+<div class="form-container">
+  <form>
+
+    <h2>Feedback Form</h2>
+
+    <div class="row">
+      <input type="text" placeholder="First Name" required>
+      <input type="text" placeholder="Last Name" required>
+    </div>
+
+    <div class="row">
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Phone Number">
+    </div>
+
+    <div class="row">
+      <select>
+        <option>Choose Category</option>
+        <option>Website Experience</option>
+        <option>Products</option>
+        <option>Services</option>
+        <option>Support</option>
+      </select>
+
+      <select>
+        <option>Rating</option>
+        <option>⭐⭐⭐⭐⭐ Excellent</option>
+        <option>⭐⭐⭐⭐ Good</option>
+        <option>⭐⭐⭐ Average</option>
+        <option>⭐⭐ Poor</option>
+      </select>
+    </div>
+
+    <input type="text" placeholder="Subject">
+
+    <textarea rows="5" placeholder="Write your detailed feedback..."></textarea>
+
+    <button type="submit">Submit Feedback</button>
+
+  </form>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Crafted Experience</p>
+  <div class="social">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+</div>
+
+</body>
+</html>
