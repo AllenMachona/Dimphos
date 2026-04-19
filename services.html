@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crafted Creations | Services</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Roboto', sans-serif;
+}
+
+/* ===== BACKGROUND SLIDESHOW ===== */
+.slideshow{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-2;
+}
+
+.slide{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  animation:fade 30s infinite;
+}
+
+.slide:nth-child(1){background-image:url('BACKGROUND.webp'); animation-delay:0s;}
+.slide:nth-child(2){background-image:url('BACK2.webp'); animation-delay:5s;}
+.slide:nth-child(3){background-image:url('weave.webp'); animation-delay:10s;}
+.slide:nth-child(4){background-image:url('hdweave.webp'); animation-delay:15s;}
+.slide:nth-child(5){background-image:url('OIP.webp'); animation-delay:20s;}
+.slide:nth-child(6){background-image:url('AA.webp'); animation-delay:25s;}
+
+@keyframes fade{
+  0%{opacity:0;}
+  10%{opacity:1;}
+  20%{opacity:1;}
+  30%{opacity:0;}
+  100%{opacity:0;}
+}
+
+/* DARK + LIGHT BLEND OVERLAY */
+.overlay{
+  background:linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+  min-height:100vh;
+}
+
+/* ===== HEADER ===== */
+header{
+  background:rgba(0,0,0,0.85);
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.nav-list{
+  display:flex;
+  list-style:none;
+}
+
+.nav-list li{
+  margin-left:20px;
+}
+
+.nav-list a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.nav-list a.active,
+.nav-list a:hover{
+  color:#f4a261;
+}
+
+/* ===== HERO ===== */
+.hero{
+  text-align:center;
+  padding:90px 20px 50px;
+}
+
+.hero h2{
+  font-size:2.7rem;
+}
+
+.hero p{
+  color:#555;
+  max-width:600px;
+  margin:auto;
+}
+
+/* ===== SERVICES ===== */
+.services{
+  padding:50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 6px 20px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:15px;
+}
+
+/* ===== EXTRA SECTION ===== */
+.extra{
+  padding:60px 40px;
+  text-align:center;
+}
+
+.extra h2{
+  margin-bottom:20px;
+}
+
+.extra p{
+  max-width:700px;
+  margin:auto;
+  color:#555;
+  line-height:1.6;
+}
+
+/* ===== PROCESS ===== */
+.process{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  padding:40px;
+}
+
+.step{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.step h3{
+  margin-bottom:10px;
+}
+
+/* ===== MODAL ===== */
+.modal{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  pointer-events:none;
+  transition:0.3s;
+}
+
+.modal.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.modal-content{
+  background:#fff;
+  padding:30px;
+  border-radius:10px;
+  width:320px;
+}
+
+.close{
+  float:right;
+  cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: url('R.JFIF') no-repeat center center/cover;
+  color: #333;
+}
+
+.overlay {
+  background: rgba(255,255,255,0.85);
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  background: rgba(0,0,0,0.85);
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  transition: 0.3s;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+/* TITLE */
+header h1 {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-left: 15px;
+  flex: 1;
+}
+
+/* NAV */
+.nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-list li {
+  margin-left: 20px;
+}
+
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-list a:hover {
+  color: #f4a261;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 40px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+}
+
+/* ABOUT */
+.about {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  color: #f4a261;
+}
+
+/* GROUP LOGO + TITLE */
+.left-header {
+  display: flex;
+  align-items: center;
+}
+</style>
+</head>
+
+<body>
+<div class="overlay">
+
+<!-- HEADER -->
+<header>
+  <div class="left-header">
+    <div class="logo">
+      <img src="logo.webp" alt="Logo">
+    </div>
+    <h1>Crafted Creations</h1>
+  </div>
+  <ul class="nav-list">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="models.html">Gallery</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+  </ul>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>Our Craft Services</h2>
+  <p>We provide high-quality handmade craft services that combine creativity, culture, and precision to deliver unique products.</p>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+
+  <div class="card" onclick="openModal('Custom Crafts')">
+    <img src="AA.webp">
+    <div class="card-content">
+      <h3>Custom Crafts</h3>
+      <p>Personalized handmade items designed for your specific needs and taste.</p>
+    </div>
+  </div>
+
+  <div class="card" onclick="openModal('Craft Repairs')">
+    <img src="CRAFT.webp">
+    <div class="card-content">
+      <h3>Craft Repairs</h3>
+      <p>We restore and repair broken crafts while maintaining their original beauty.</p>
+    </div>
+  </div>
+
+  <div class="card" onclick="openModal('Decor Design')">
+    <img src="OIP.webp">
+    <div class="card-content">
+      <h3>Decor Design</h3>
+      <p>Creative handmade decorations for homes, offices, and special events.</p>
+    </div>
+  </div>
+
+  <div class="card" onclick="openModal('Weaving Services')">
+    <img src="weave.webp">
+    <div class="card-content">
+      <h3>Weaving Services</h3>
+      <p>Traditional weaving techniques used to create modern artistic products.</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- EXTRA CONTENT -->
+<section class="extra">
+  <h2>Why Choose Our Services?</h2>
+  <p>
+    Our craft services stand out because of our dedication to quality, creativity, and customer satisfaction.
+    Every piece we create is handmade with care and attention to detail. We combine traditional techniques
+    with modern design ideas to produce crafts that are both meaningful and visually appealing.
+  </p>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="step">
+    <h3>1. Idea</h3>
+    <p>You share your idea or choose from our designs.</p>
+  </div>
+  <div class="step">
+    <h3>2. Creation</h3>
+    <p>We carefully craft your item using quality materials.</p>
+  </div>
+  <div class="step">
+    <h3>3. Delivery</h3>
+    <p>Your handmade craft is delivered ready to use or gift.</p>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="title"></h3>
+    <p id="desc"></p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Crafted Creations | Handmade with Passion</p>
+</footer>
+
+</div>
+
+<script>
+function openModal(service){
+  const modal = document.getElementById('modal');
+  const title = document.getElementById('title');
+  const desc = document.getElementById('desc');
+
+  const data = {
+    "Custom Crafts":"We design unique handmade crafts tailored to your preferences.",
+    "Craft Repairs":"We repair and restore crafts to their original quality.",
+    "Decor Design":"We create stunning handmade decorations.",
+    "Weaving Services":"We produce high-quality woven crafts using expert techniques."
+  };
+
+  title.textContent = service;
+  desc.textContent = data[service];
+
+  modal.classList.add('show');
+}
+
+function closeModal(){
+  document.getElementById('modal').classList.remove('show');
+}
+</script>
+
+</body>
+</html>
